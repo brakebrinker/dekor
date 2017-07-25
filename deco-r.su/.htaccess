@@ -1,0 +1,7 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^www.deco-r.su$ [NC]
+
+RewriteRule ^(.*)$ http://deco-r.su/$1 [R=301,L]
+
+RewriteRule (.*).html$ $1.php [NC,L]

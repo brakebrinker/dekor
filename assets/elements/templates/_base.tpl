@@ -8,19 +8,18 @@
   {insert 'file:chunks/meta.tpl'}
 </head>
 
-<body class="boxed">
-  <div id="wrapper">
+<body id="index" class="main">
+
+<div id="dpi"></div>
 
     {insert 'file:chunks/header.tpl'}
     
     {block 'content'}{/block}
 
-    {insert 'file:chunks/footer.tpl'}
-    
-  </div>
+    <!-- Java Script ================================================== -->
+    {insert 'file:chunks/scripts.tpl'}
 
-  <!-- Java Script ================================================== -->
-  {insert 'file:chunks/scripts.tpl'}
+    {insert 'file:chunks/footer.tpl'}
 
 </body>
 </html>
