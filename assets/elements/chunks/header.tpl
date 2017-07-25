@@ -6,10 +6,14 @@
     <div>
 
         <a href="tel:+74959606074">{$_modx->config['header_phone']}</a>
-        <a href="catalog.html">Каталог</a>
-        <a href="gallery.html">Галерея</a>
-        <a href="manufacture.html">Производство</a>
-        <a href="index.html#contact">Контакты</a>
+          {$_modx->runSnippet('pdoMenu', [
+            'parents' => '0',
+            'level' => '1',
+            'tplOuter' => '@INLINE <div class="menu" >{$wrapper}</div>',
+            'tpl' => '@INLINE <a href="{$link}" {$attributes}>{$menutitle}</a>{$wrapper}',
+            'firstClass' => 'homepage',
+            'hereClass' => 'current',
+          ])}
     </div>
     <div class="price-request-button" title="Запросить прайс-лист">Прайс</div>
 </header>

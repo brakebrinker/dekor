@@ -4,7 +4,7 @@
 <section>
     <!--<img src="styles/deco-r-logo-04-650x490.jpg" class="logo">
     <h1>Декоративные экологичные панели из древесины</h1>-->
-    <p>Компания ДЕКО•Р предлагает принципиально новый подход к созданию индивидуального стиля мебели или интерьера с помощью объемных 3D панелей, которые можно использовать как для вставок в мебель и двери, так и для декора стен и элементов помещений в поддержку мебели.</p>
+    <p>{$_modx->resource.introtext}</p>
   <div class="slogan">Лучшие 3D-панели</div>
 </section>
 <img src="images/samples-01.jpg" class="img-mobile">
@@ -27,14 +27,3 @@
     </div>
 </section>
 {/block}
-
-<script type="text/javascript">
-  jQuery(document).ready(function ($) {
-    $('.nav.nav-tabs a').on('click', function() {
-        $('#block-block-2').removeClass('active');
-      if ($('#target-map').hasClass('active')) {
-        $('#block-block-2').addClass('active');
-      }
-    })
-  });
-</script>

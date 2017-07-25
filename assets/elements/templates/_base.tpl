@@ -7,9 +7,11 @@
 <head>
   {insert 'file:chunks/meta.tpl'}
 </head>
-
-<body id="index" class="main">
-
+{if $_modx->resource.id == 1}
+    <body id="index" class="main">
+{else}
+    <body id="catalog">
+{/if}
 <div id="dpi"></div>
 
     {insert 'file:chunks/header.tpl'}
