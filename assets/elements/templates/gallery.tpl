@@ -8,7 +8,7 @@
 {$_modx->runSnippet('pdoResources', [
   'tpl' => '@FILE chunks/galleryRowTpl.tpl',
   'limit' => '0',
-  'includeTVs' => 'product_preview_img,product_preview_img_2',
+  'includeTVs' => 'gallery_imgs',
 ])}
 
 {/block}
