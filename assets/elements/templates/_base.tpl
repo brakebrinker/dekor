@@ -9,18 +9,23 @@
 </head>
 {if $_modx->resource.id == 1}
     <body id="index" class="main">
-{else}
-    <body id="catalog">
+    <div id="dpi"></div>
 {/if}
-<div id="dpi"></div>
+{if $_modx->resource.id == 2}
+    <body id="catalog">
+    <div id="dpi"></div>
+{/if}
+{if $_modx->resource.id == 3}
+    <body id="gallery">
+    <div id="dpi"></div>
+{/if}
+{if $_modx->resource.id != 3 || $_modx->resource.id != 2 || $_modx->resource.id != 1}
+    <body id="product">
+{/if}
 
     {insert 'file:chunks/header.tpl'}
-    
     {block 'content'}{/block}
-
-    <!-- Java Script ================================================== -->
     {insert 'file:chunks/scripts.tpl'}
-
     {insert 'file:chunks/footer.tpl'}
 
 </body>
