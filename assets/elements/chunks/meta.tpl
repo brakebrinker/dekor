@@ -9,8 +9,10 @@
 <!-- Mobile Specific Metas
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&amp;subset=cyrillic" rel="stylesheet">
 <!-- CSS
 ================================================== -->
+<link href="{$_modx->config['assets_url']}css/slick.css" rel="stylesheet">
 <link href="{$_modx->config['assets_url']}css/styles.css" rel="stylesheet">
 
 <!--[if lt IE 9]>

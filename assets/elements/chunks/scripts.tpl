@@ -1,12 +1,24 @@
-<script src="{$_modx->config['assets_url']}js/jquery-3.1.0.min.js" rel="script"></script>
+<!-- <script src="{$_modx->config['assets_url']}js/jquery-3.1.0.min.js" rel="script"></script> -->
+<script
+  src="http://code.jquery.com/jquery-1.12.4.min.js"
+  integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+  crossorigin="anonymous"></script>
 <script>
         if ($('#product').length != 0) 
             $('#product section').find('img').addClass('showbox');
 </script>
 <script src="{$_modx->config['assets_url']}js/script.js" rel="script"></script>
 <script src="{$_modx->config['assets_url']}js/jquery.maskedinput.js"></script>
+<script src="{$_modx->config['assets_url']}js/slick.min.js"></script>
 <script type="text/javascript">$(function() { $("#phone").mask("+7 (999) 999-99-99"); });</script> 
 
+<script>
+    $('.slider-home-container').slick({
+      infinite: false,
+      prevArrow: '<button type="button" class="slick-prev"></button>',
+      nextArrow: '<button type="button" class="slick-next"></button>',
+    });
+</script>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
