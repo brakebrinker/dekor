@@ -44,8 +44,8 @@
         </div>
     </div>
 </section>
-<section class="home-introtext">
-    <div class="home-introtext__container">
+<section class="home-contenttext">
+    <div class="home-contenttext__container">
         {$_modx->resource.content}
     </div>
 </section>

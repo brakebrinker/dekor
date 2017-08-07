@@ -309,16 +309,29 @@ footer a{
 		}
 		.down-header .menu {
 		    display: flex;
-		    justify-content: space-between;
+		    justify-content: center;
 		    max-width: 1170px;
 		    margin: 0 auto;
 		}
 		.down-header .menu a {
-		    padding: 18px 30px;
-		    color: #ffecc9;
-		    font-size: 28px;
-		    font-weight: 300;
+      padding: 18px 0;
+      color: #ffecc9;
+      font-size: 28px;
+      font-weight: 300;
+      display: inline-flex;
+      align-items: flex-end;
 		}
+    .down-header .menu a:after {
+        content: "";
+        width: 1px;
+        height: 30px;
+        background-color: rgb(92, 47, 45);
+        display: inline-block;
+        margin: 0 30px;
+    }
+    .down-header .menu a:last-child:after {
+        display: none;
+    }
 
 /*-----------------INDEX PAGE---------------*/
 
@@ -379,6 +392,19 @@ body#index h1 {
 
   width: 550px; }
 
+  select.form-control {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 300;
+  }
+  .form-control option {
+    font-weight: 300;
+  }
+  button {
+    cursor: pointer;
+  }
 
 
 #maps {
@@ -464,7 +490,8 @@ body#index section.consult-wrapper {
 
 section.main-catalog-wrapper,
 section.company-products-wrapper,
-section.benefits
+section.benefits,
+section.catalog
  {
     background-color: #ffebc8;
     padding: 60px 0;
@@ -486,6 +513,9 @@ section.benefits
 .main-catalog-container .ms2_product_main {
     background-color: #fff;
     padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 .main-catalog__items {
     display: flex;
@@ -493,12 +523,32 @@ section.benefits
     justify-content: space-between;
 }
 .ms2_product_main {
-    width: 22%;
+    width: 23%;
     box-sizing: border-box;
-    margin: 16px 12px;
+    margin: 16px 8px;
+}
+
+.product_img {
+    overflow: hidden;
+    height: 195px;
+}
+.product_img img {
+    height: 100%;
+    width: auto;
+}
+.product_info {
+    margin-top: 15px;
+}
+
+form.ms2_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: 300;
 }
 form.ms2_form > div {
     display: flex;
+    margin: 3px 0;
     justify-content: space-between;
 }
 form.ms2_form .prod-title {
@@ -509,10 +559,14 @@ form.ms2_form .prod-title {
 form.ms2_form button {
     color: #fff;
     border: none;
-    padding: 3px 10px;
+    padding: 7px 16px;
     background-color: rgb(139, 195, 74);
     text-transform: uppercase;
     margin-top: 10px;
+    cursor: poi
+}
+form.ms2_form .styles {
+    text-align: right;
 }
 
 .slider-descr {
@@ -539,6 +593,7 @@ form.ms2_form button {
     line-height: 1.0;
     margin: 0;
     margin-top: 312px;
+    color: #fff;
 }
 .slider-home-container h3 {
     width: max-content;
@@ -609,17 +664,20 @@ button.slick-prev.slick-arrow {
     transition: all .2s;
 }
 
-section.home-introtext {
+section.home-introtext,
+section.home-contenttext {
     background: transparent;
     padding: 56px 0;
 }
-.home-introtext__container {
+.home-introtext__container,
+.home-contenttext__container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 73px 108px;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.85);
 }
-.home-introtext__container p {
+.home-introtext__container p,
+.home-contenttext__container p {
     max-width: 100%;
     color: #000000;
     font-size: 29px;
