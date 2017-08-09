@@ -40,7 +40,7 @@
     <div class="benefits-container">
         <h3>Преимущества 3D панелей</h3>
         <div class="benefits__items">
-            {insert 'file:chunks/benefitsHome.tpl'}
+        {insert 'file:chunks/benefitsHome.tpl'}
         </div>
     </div>
 </section>

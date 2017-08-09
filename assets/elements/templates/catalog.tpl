@@ -2,13 +2,15 @@
 
 {block 'content'}
 <section class="catalog">
+	<div class="catalog-wrapper">
     <h1>{$_modx->resource.longtitle}</h1>
     {$_modx->resource.content}
+	    <div class="main-catalog__items">
+	    {$_modx->runSnippet('!msProducts', [
+	        'parents' => '2',
+	        'tpl' => '@FILE chunks/productsMainRow.tpl'
+	    ])}
+	    </div>
+    </div>
 </section>
-{$_modx->runSnippet('pdoResources', [
-  'tpl' => '@FILE chunks/productRowTpl.tpl',
-  'limit' => '0',
-  'includeTVs' => 'product_preview_img,product_preview_img_2',
-])}
-
 {/block}

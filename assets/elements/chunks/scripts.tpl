@@ -10,9 +10,25 @@
 <script src="{$_modx->config['assets_url']}js/script.js" rel="script"></script>
 <script src="{$_modx->config['assets_url']}js/jquery.maskedinput.js"></script>
 <script src="{$_modx->config['assets_url']}js/slick.min.js"></script>
+<script src="{$_modx->config['assets_url']}js/jquery.waterwheelCarousel.min.js"></script>
 <script type="text/javascript">$(function() { $("#phone").mask("+7 (999) 999-99-99"); });</script> 
 
 <script>
+    //Carousel
+  $(".waterwheel-carousel").waterwheelCarousel({
+    horizon: 200,
+    horizonOffset: 50,
+    horizonOffsetMultiplier: .7,
+    separation: 150,
+    edgeFadeEnabled: true,
+    forcedImageWidth: 500,
+    forcedImageHeight: 400,
+    flankingItems: 1
+  });
+</script>
+
+<script>
+// slider
     $('.slider-home-container').slick({
       infinite: false,
       prevArrow: '<button type="button" class="slick-prev"></button>',

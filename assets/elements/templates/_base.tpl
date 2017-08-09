@@ -19,9 +19,13 @@
     <body id="gallery">
     <div id="dpi"></div>
 {/if}
-{if $_modx->resource.id != 3 || $_modx->resource.id != 2 || $_modx->resource.id != 1}
+{if $_modx->resource.id > 20 || $_modx->resource.id == 4}
+    <body id="static">
+{/if}
+{if (($_modx->resource.id != 4) || ($_modx->resource.id != 3 && $_modx->resource.id < 20) || ($_modx->resource.id != 2 && $_modx->resource.id < 20) || ($_modx->resource.id != 1 && $_modx->resource.id < 20)) }
     <body id="product">
 {/if}
+
 
     {insert 'file:chunks/header.tpl'}
     {block 'content'}{/block}
