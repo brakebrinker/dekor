@@ -13,6 +13,7 @@
 <!-- CSS
 ================================================== -->
 <link href="{$_modx->config['assets_url']}css/slick.css" rel="stylesheet">
+<link href="{$_modx->config['assets_url']}css/magnific-popup.css" rel="stylesheet">
 <link href="{$_modx->config['assets_url']}css/styles.css" rel="stylesheet">
 
 <!--[if lt IE 9]>

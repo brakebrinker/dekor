@@ -23,7 +23,7 @@
 			
 		</div>
 		<div class="call">
-			<a href="#">Заказать звонок</a>
+			<a href="#call-form" class="open-popup-link">Заказать звонок</a>
 			<a class="mini-cart-header" href="{$_modx->makeUrl(23)}" target="_blank">
 			[[!msMiniCart?tpl=`miniCartTpl`]]
 			</a>

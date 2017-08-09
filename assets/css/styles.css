@@ -3,8 +3,9 @@
 /*body{margin-top: 100px !important;}*/
 
 /*Carousel*/
-.waterwheel-carousel {
-  width:100%;
+.waterwheel-carousel,
+.waterwheel-carousel-main {
+  /*width:100%;*/
   height:500px;
   position:relative;
   clear:both;
@@ -14,6 +15,15 @@
 #waterwheel-carousel img {
   visibility:hidden; /* hide images until carousel positions them */
   cursor:pointer;
+}
+/* Popup */
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width: auto;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 
@@ -139,7 +149,7 @@ section {
 /*-----------------HEADER---------------*/
 
 header {
-  background: #5c0000 url("bg-brown-400x100.gif");
+  background: #5c0000 url("../images/bg-brown-400x100.gif");
   /*position: fixed;*/
 	border-top: 4px groove darkred;
 
@@ -556,7 +566,9 @@ section.static h1,
 section.cart h1,
 .benefits h3,
 section.catalog h1,
-section.gallery h1
+section.gallery h1,
+section.main-gallery h3,
+.call-form h3
  {
     font-size: 44px;
     font-weight: 300;
@@ -736,13 +748,15 @@ button.slick-prev.slick-arrow {
 
 section.home-introtext,
 section.static,
-section.home-contenttext {
+section.home-contenttext,
+section.main-gallery {
     background: transparent;
     padding: 56px 0;
 }
 .home-introtext__container,
 .static-wrapper,
-.home-contenttext__container {
+.home-contenttext__container,
+.main-gallery__items {
     max-width: 1170px;
     margin: 0 auto;
     padding: 73px 108px;
@@ -951,7 +965,9 @@ section.cart h4 {
 section.cart .form-group.input-parent {
     margin: 12px 0;
 }
-section.cart input[type="text"], section.cart  input[type="email"], section.cart textarea {
+section.cart input[type="text"], section.cart  input[type="email"], section.cart textarea,
+.call-form input[type="text"]
+ {
     width: 100%;
     box-sizing: border-box;
     font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
@@ -979,6 +995,32 @@ section.cart .cart-container h3 {
 .gallery .object-descr {
     font-size: 22px;
     font-weight: 300;
+}
+
+.static-content {
+    margin-bottom: 100px;
+}
+
+.call-form {
+    max-width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.call-form .controls {
+    margin-bottom: 10px;
+}
+.call-form button {
+    display: block;
+    width: 100%;
+    background: none;
+    border: 2px solid #8bc34a;
+    color: #8bc34a;
+    font-family: 'Yanone Kaffeesatz', Arial, sans-serif;
+    font-size: 20px;
+    padding: 7px 10px 4px;
+    text-decoration: none;
 }
 
 img.logo {
@@ -1050,7 +1092,7 @@ body#catalog section {
 
 body#gallery, body#manufacture {
 
-  background: url("bg-beige-160x160.jpg"); }
+  /*background: url("bg-beige-160x160.jpg");*/ }
 
   body#gallery section, body#manufacture section {
 
@@ -1115,7 +1157,7 @@ body#manufacture object {
 
 body#product {
 
-  background: url("bg-beige-160x160.jpg"); }
+  /* background: url("bg-beige-160x160.jpg"); */ }
 
   body#product p {
 

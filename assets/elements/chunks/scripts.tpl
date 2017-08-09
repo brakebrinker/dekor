@@ -4,17 +4,32 @@
   integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
   crossorigin="anonymous"></script>
 <script>
-        if ($('#product').length != 0) 
-            $('#product section').find('img').addClass('showbox');
+        // if ($('#product').length != 0) 
+        //     $('#product section').find('img').addClass('showbox');
 </script>
 <script src="{$_modx->config['assets_url']}js/script.js" rel="script"></script>
 <script src="{$_modx->config['assets_url']}js/jquery.maskedinput.js"></script>
 <script src="{$_modx->config['assets_url']}js/slick.min.js"></script>
+<script src="{$_modx->config['assets_url']}js/jquery.magnific-popup.min.js"></script>
 <script src="{$_modx->config['assets_url']}js/jquery.waterwheelCarousel.min.js"></script>
-<script type="text/javascript">$(function() { $("#phone").mask("+7 (999) 999-99-99"); });</script> 
+<script type="text/javascript">$(function() { $("#phone").mask("+7 (999) 999-99-99"); });</script>
 
 <script>
-    //Carousel
+    //popup
+    $('.open-popup-link').magnificPopup({
+      type:'inline',
+      midClick: true // Allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source in href.
+    });
+
+    $('.prod-gallery-popup-link').magnificPopup({
+      type: 'image'
+      // other options
+    });
+</script>
+
+<script>
+jQuery(document).ready(function($) {
+    //Carousel gallery
   $(".waterwheel-carousel").waterwheelCarousel({
     horizon: 200,
     horizonOffset: 50,
@@ -25,6 +40,18 @@
     forcedImageHeight: 400,
     flankingItems: 1
   });
+  //Carousel main
+  $(".waterwheel-carousel-main").waterwheelCarousel({
+    horizon: 200,
+    horizonOffset: 50,
+    horizonOffsetMultiplier: .7,
+    separation: 150,
+    edgeFadeEnabled: true,
+    forcedImageWidth: 500,
+    forcedImageHeight: 400,
+    flankingItems: 3
+  });
+});
 </script>
 
 <script>

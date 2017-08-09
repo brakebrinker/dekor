@@ -29,8 +29,9 @@
 
     {insert 'file:chunks/header.tpl'}
     {block 'content'}{/block}
-    {insert 'file:chunks/scripts.tpl'}
     {insert 'file:chunks/footer.tpl'}
+    {insert 'file:chunks/popup.tpl'}
+    {insert 'file:chunks/scripts.tpl'}
 
 </body>
 </html>
