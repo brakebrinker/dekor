@@ -6,6 +6,17 @@
 
 <title>{$_modx->runSnippet('!pdoTitle', ['cache' => '1', 'outputSeparator' => ' | '])} | {$_modx->config.site_name}</title>
 
+{if $_modx->resource.keywords_seo?}
+<meta name="keywords" content="{$_modx->resource.keywords_seo}" />
+{else}
+<meta name="keywords" content="{$_modx->resource.pagetitle}" />
+{/if}
+{if $_modx->resource.description_seo?}
+<meta name="description" content="{$_modx->resource.description_seo}" />
+{else}
+<meta name="description" content="DecoMur" />
+{/if}
+
 <!-- Mobile Specific Metas
 ================================================== -->
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

@@ -12,6 +12,13 @@
 		</div>
 		<div class="foot-catalog">
 			<h3>Категории</h3>
+			<div class="cat-wrapper">
+				{$_modx->runSnippet('!pdoResources', [
+				  'tpl' => '@FILE chunks/footProduce.tpl',
+				  'parents' => '27',
+				  'limit' => '0',
+				])}
+			</div>
 		</div>
 		<div class="foot-contacts">
 			<h3>Контакты</h3>

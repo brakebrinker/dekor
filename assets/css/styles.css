@@ -1022,6 +1022,26 @@ section.cart .cart-container h3 {
     padding: 7px 10px 4px;
     text-decoration: none;
 }
+.produce-content p {
+    font-size: 19px;
+    font-weight: 300;
+}
+.produce.gallery-popup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.produce.gallery-popup a {
+    display: block;
+    margin-bottom: 20px;
+    width: 25%;
+    box-sizing: border-box;
+}
+
+foot-container .cat-wrapper a {
+    display: block;
+    text-align: left;
+}
 
 img.logo {
 
