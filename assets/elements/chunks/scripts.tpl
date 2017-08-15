@@ -45,27 +45,140 @@
 <script>
 jQuery(document).ready(function($) {
     //Carousel gallery
-  $(".waterwheel-carousel").waterwheelCarousel({
-    horizon: 200,
-    horizonOffset: 50,
-    horizonOffsetMultiplier: .7,
-    separation: 150,
-    edgeFadeEnabled: true,
-    forcedImageWidth: 500,
-    forcedImageHeight: 400,
-    flankingItems: 1
-  });
-  //Carousel main
-  $(".waterwheel-carousel-main").waterwheelCarousel({
-    horizon: 200,
-    horizonOffset: 50,
-    horizonOffsetMultiplier: .7,
-    separation: 150,
-    edgeFadeEnabled: true,
-    forcedImageWidth: 500,
-    forcedImageHeight: 400,
-    flankingItems: 3
-  });
+    var dwidth = $(document).width();
+
+    if (dwidth > 1170) {
+      $(".waterwheel-carousel").waterwheelCarousel({
+        horizon: 320,
+        horizonOffset: 60,
+        horizonOffsetMultiplier: .7,
+        separation: 250,
+        edgeFadeEnabled: true,
+        forcedImageWidth: 800,
+        forcedImageHeight: 600,
+        flankingItems: 1
+      });
+      //Carousel main
+      $(".waterwheel-carousel-main").waterwheelCarousel({
+        horizon: 320,
+        horizonOffset: 60,
+        horizonOffsetMultiplier: .7,
+        separation: 220,
+        edgeFadeEnabled: true,
+        forcedImageWidth: 800,
+        forcedImageHeight: 600,
+        flankingItems: 2
+      });
+    } else if (dwidth <= 1170 && dwidth > 992) {
+      $(".waterwheel-carousel").waterwheelCarousel({
+        horizon: 300,
+        horizonOffset: 50,
+        horizonOffsetMultiplier: .7,
+        separation: 230,
+        edgeFadeEnabled: true,
+        forcedImageWidth: 700,
+        forcedImageHeight: 550,
+        flankingItems: 1
+      });
+      $(".waterwheel-carousel-main").waterwheelCarousel({
+        horizon: 300,
+        horizonOffset: 50,
+        horizonOffsetMultiplier: .7,
+        separation: 230,
+        edgeFadeEnabled: true,
+        forcedImageWidth: 700,
+        forcedImageHeight: 550,
+        flankingItems: 1
+      });
+    } else if (dwidth <= 992 && dwidth > 768) {
+    $(".waterwheel-carousel").waterwheelCarousel({
+      horizon: 260,
+      horizonOffset: 25,
+      horizonOffsetMultiplier: .7,
+      separation: 180,
+      edgeFadeEnabled: true,
+      forcedImageWidth: 500,
+      forcedImageHeight: 400,
+      flankingItems: 1
+    });
+
+    $(".waterwheel-carousel-main").waterwheelCarousel({
+      horizon: 260,
+      horizonOffset: 25,
+      horizonOffsetMultiplier: .7,
+      separation: 180,
+      edgeFadeEnabled: true,
+      forcedImageWidth: 500,
+      forcedImageHeight: 400,
+      flankingItems: 1
+    });
+  } else if (dwidth <= 768 && dwidth > 520) {
+    $(".waterwheel-carousel").waterwheelCarousel({
+      horizon: 200,
+      horizonOffset: 25,
+      horizonOffsetMultiplier: .7,
+      separation: 130,
+      edgeFadeEnabled: true,
+      forcedImageWidth: 350,
+      forcedImageHeight: 300,
+      flankingItems: 1
+    });
+    //Carousel main
+    $(".waterwheel-carousel-main").waterwheelCarousel({
+      horizon: 200,
+      horizonOffset: 25,
+      horizonOffsetMultiplier: .7,
+      separation: 130,
+      edgeFadeEnabled: true,
+      forcedImageWidth: 350,
+      forcedImageHeight: 300,
+      flankingItems: 1
+    });
+  } else if (dwidth <= 520 && dwidth > 380) {
+    $(".waterwheel-carousel").waterwheelCarousel({
+      horizon: 150,
+      horizonOffset: 25,
+      horizonOffsetMultiplier: .7,
+      separation: 80,
+      edgeFadeEnabled: true,
+      forcedImageWidth: 250,
+      forcedImageHeight: 200,
+      flankingItems: 1
+    });
+    //Carousel main
+    $(".waterwheel-carousel-main").waterwheelCarousel({
+      horizon: 150,
+      horizonOffset: 25,
+      horizonOffsetMultiplier: .7,
+      separation: 80,
+      edgeFadeEnabled: true,
+      forcedImageWidth: 250,
+      forcedImageHeight: 200,
+      flankingItems: 1
+    });
+  } else if (dwidth <= 380) {
+    $(".waterwheel-carousel").waterwheelCarousel({
+      horizon: 100,
+      horizonOffset: 15,
+      horizonOffsetMultiplier: .7,
+      separation: 70,
+      edgeFadeEnabled: true,
+      forcedImageWidth: 150,
+      forcedImageHeight: 100,
+      flankingItems: 1
+    });
+    //Carousel main
+    $(".waterwheel-carousel-main").waterwheelCarousel({
+      horizon: 100,
+      horizonOffset: 15,
+      horizonOffsetMultiplier: .7,
+      separation: 70,
+      edgeFadeEnabled: true,
+      forcedImageWidth: 150,
+      forcedImageHeight: 100,
+      flankingItems: 1
+    });
+  }
 });
 </script>
 

@@ -12,7 +12,7 @@
 		<div class="company-products-container">
 			{$_modx->runSnippet('!pdoResources', [
 			  'tpl' => '@FILE chunks/produce.tpl',
-			  'parents' => '27',
+			  'parents' => '2',
 			  'limit' => '3',
 			  'includeTVs' => 'produce_preview_img',
 			])}

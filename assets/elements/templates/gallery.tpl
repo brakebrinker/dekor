@@ -1,6 +1,7 @@
 {extends 'file:templates/_base.tpl'} 
 
 {block 'content'}
+{insert 'file:chunks/breadcrumbs.tpl'}
 <section class="gallery">
 	<div class="gallery-container">
 		<h1>{$_modx->resource.longtitle}</h1>

@@ -15,7 +15,8 @@
 			<div class="cat-wrapper">
 				{$_modx->runSnippet('!pdoResources', [
 				  'tpl' => '@FILE chunks/footProduce.tpl',
-				  'parents' => '27',
+				  'parents' => '2',
+				  'where' => '{"parent":"2","isfolder":"1"}',
 				  'limit' => '0',
 				])}
 			</div>
