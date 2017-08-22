@@ -8,7 +8,7 @@
 </section>
 <section class="company-products-wrapper">
 	<div class="company-products">
-		<h3>Продукция компании</h3>
+		<h1>Продукция компании</h1>
 		<div class="company-products-container">
 			{$_modx->runSnippet('!pdoResources', [
 			  'tpl' => '@FILE chunks/produce.tpl',
@@ -24,9 +24,20 @@
 		{$_modx->resource.infotext_main}
 	</div>
 </section>
+<section class="main-catalog-wrapper">
+	<div class="main-catalog-container">
+		<h2>Каталог товаров</h2>
+		<div class="main-catalog__items">
+		{$_modx->runSnippet('!msProducts', [
+			'parents' => '2',
+			'tpl' => '@FILE chunks/productsMainRow.tpl'
+		])}
+		</div>
+	</div>
+</section>
 <section class="benefits">
 	<div class="benefits-container">
-		<h3>Преимущества 3D панелей</h3>
+		<h2>Преимущества 3D панелей</h2>
 		<div class="benefits__items">
 		{insert 'file:chunks/benefitsHome.tpl'}
 		</div>
@@ -37,21 +48,10 @@
 		{$_modx->resource.content}
 	</div>
 </section>
-<section class="main-catalog-wrapper">
-	<div class="main-catalog-container">
-		<h3>Каталог товаров</h3>
-		<div class="main-catalog__items">
-		{$_modx->runSnippet('!msProducts', [
-			'parents' => '2',
-			'tpl' => '@FILE chunks/productsMainRow.tpl'
-		])}
-		</div>
-	</div>
-</section>
 <section class="main-gallery">
 	<div class="main-gallery-container">
 		<div class="main-gallery__items waterwheel-carousel">
-			<h3>Галерея</h3>
+			<h2>Галерея</h2>
 			<div class="object">
 			    {set $rows = json_decode($_modx->resource.mainalbum, true)}
 			    </div>
@@ -67,7 +67,7 @@
 </section>
 <section class="consult-wrapper">
 	<div class="main-consult-container">
-	<h3>Получить консультацию</h3>
+	<h2>Получить консультацию</h2>
 	[[!AjaxForm?
 		&snippet=`FormIt`
 		&form=`@FILE chunks/consultForm.tpl`
@@ -82,7 +82,7 @@
 </section>
 <section id="contact">
 	<div class="main-cont-wrapper">
-		<div><h3>Контакты</h3></div>
+		<div><h2>Контакты</h2></div>
 		<div>Телефон: <a href="tel:+74959606074">{$_modx->config['header_phone']}</a></div>
 		<div>E-mail: <a href="mailto:{$_modx->config['header_email']}">{$_modx->config['header_email']}</a></div>
 		<div>Адрес: Московская обл., Солнечногорский район, пгт. Поварово, ул. Почтовая, д.29</div>

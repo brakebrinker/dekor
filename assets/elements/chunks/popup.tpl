@@ -5,7 +5,7 @@
 		&hooks=`email`
 		&emailSubject=`Заказ звонка`
 		&emailTo=`{$_modx->config['header_email']}`
-		&validate=`name:required,phone:required`
+		&validate=`name:required,phone:required,iagry:required`
 		&validationErrorMessage=`В форме содержатся ошибки!`
 		&successMessage=`Сообщение успешно отправлено`
 	]]

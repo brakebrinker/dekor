@@ -1,5 +1,5 @@
 //smooth scrolling on Index page
-
+formCheck();
 var localLinks = document.querySelectorAll("a[href^='#']");
 
 if (localLinks[0]) {
@@ -260,3 +260,43 @@ $(document).ready(function() {
     });
 
 });
+
+    function formCheck() {
+        $(document).on('af_complete', function(event, response) {
+            var fields = {
+                name: "Имя",
+                phone:"Телефон",
+                iagry:"Согласие обработки данных",
+            };
+            if (response.success) {
+                // Скрываем форму и показываем блок!
+                //response.form.hide();
+                console.log('xyu');
+                if (document.getElementsByClassName('g-recaptcha').length) grecaptcha.reset();
+                $.magnificPopup.open({
+                    items: {
+                        src: '#form-popup-result-doc'
+                    },
+                    type: 'inline'
+
+                    // You may add options here, they're exactly the same as for $.fn.magnificPopup call
+                    // Note that some settings that rely on click event (like disableOn or midClick) will not work here
+                }, 0);
+            } else {
+                for (var prop in response.data) {
+                    // Выводим сообщение через jGrowl для всех полей с ошибками.
+                    // Если хотите, чтобы сообщения оставались, добавьте вторым параметром true
+                    AjaxForm.Message.error("Заполните поле '"+fields[prop]+"'");
+                }
+            }
+            // Отменяем вывод стандартного сообщения
+            response.message='';
+        });
+
+        // Вешаем обработчик
+        $(document).on('click', '#onemore-feedback', function(e) {
+            $("#success-response").fadeOut();
+            $("#contactform").fadeIn();
+            e.preventDefault();
+        });
+    }
