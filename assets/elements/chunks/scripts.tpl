@@ -11,6 +11,7 @@
 <script src="{$_modx->config['assets_url']}js/jquery.maskedinput.js"></script>
 <script src="{$_modx->config['assets_url']}js/slick.min.js"></script>
 <script src="{$_modx->config['assets_url']}js/jquery.magnific-popup.min.js"></script>
+<script src="{$_modx->config['assets_url']}js/jquery.meanmenu.js"></script>
 <script src="{$_modx->config['assets_url']}js/jquery.waterwheelCarousel.min.js"></script>
 <script type="text/javascript">$(function() { $("#phone").mask("+7 (999) 999-99-99"); });</script>
 
@@ -41,7 +42,11 @@
           }
     });
 </script>
-
+<script>
+  jQuery(document).ready(function($) {
+    $('header nav.menu').meanmenu();
+  });
+</script>
 <script>
 jQuery(document).ready(function($) {
     //Carousel gallery

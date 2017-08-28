@@ -10,3 +10,7 @@
 </section>
 <div class="margin-top-40"></div>
 {/block}
+{$_modx->runSnippet('!msProducts', [
+	'parents' => $_modx->resource.id,
+	'tpl' => '@FILE chunks/productsMainRow.tpl'
+])}

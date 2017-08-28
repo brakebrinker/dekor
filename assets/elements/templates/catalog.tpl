@@ -10,10 +10,19 @@
 			<div class="center">
 			{$_modx->resource.content}
 				<div class="main-catalog__items">
-				{$_modx->runSnippet('!msProducts', [
-					'parents' => $_modx->resource.id,
-					'tpl' => '@FILE chunks/productsMainRow.tpl'
-				])}
+					<div id="pdopage">
+					    <div class="rows">
+							[[!pdoPage?
+							           &parents=`$_modx->resource.id`
+							           &element=`msProducts`
+							           &ajaxMode=`default`
+							           &limit=`2`
+							           &parents=`$_modx->resource.id`
+							           &tpl=`@FILE chunks/productsMainRow.tpl`
+							       ]]
+				       </div>
+						[[!+page.nav]]
+					</div>
 				</div>
 			</div>
 		</div>

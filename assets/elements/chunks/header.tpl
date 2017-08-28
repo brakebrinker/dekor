@@ -32,11 +32,12 @@
 	<div class="down-header">
 		{$_modx->runSnippet('pdoMenu', [
 		'parents' => '0',
-		'level' => '1',
-		'tplOuter' => '@INLINE <div class="menu" >{$wrapper}</div>',
-		'tpl' => '@INLINE <a href="{$link}" {$attributes}>{$menutitle}</a>{$wrapper}',
+		'level' => '2',
+		'tplOuter' => '@INLINE <nav class="menu" ><ul>{$wrapper}</ul></nav>',
+		'tpl' => '@INLINE <li{$classes}><a href="{$link}" {$attributes}>{$menutitle}</a>{$wrapper}</li>',
 		'firstClass' => 'homepage',
 		'hereClass' => 'current',
+		'tplInner' => '@INLINE <ul>{$wrapper}</ul>',
 		])}
 		<!-- <div class="price-request-button" title="Запросить прайс-лист">Прайс</div> -->
 	</div>

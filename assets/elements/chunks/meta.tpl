@@ -19,12 +19,14 @@
 
 <!-- Mobile Specific Metas
 ================================================== -->
-<meta name="viewport" content="width=320px, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="icon" type="image/png" sizes="32x32" href="{$_modx->config['assets_url']}images/favicon.png">
 <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400,700&amp;subset=cyrillic" rel="stylesheet">
 <!-- CSS
 ================================================== -->
 <link href="{$_modx->config['assets_url']}css/slick.css" rel="stylesheet">
 <link href="{$_modx->config['assets_url']}css/magnific-popup.css" rel="stylesheet">
+<link href="{$_modx->config['assets_url']}css/meanmenu.min.css" rel="stylesheet">
 <link href="{$_modx->config['assets_url']}css/styles.css" rel="stylesheet">
 
 

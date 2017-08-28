@@ -19,7 +19,7 @@
     <body id="gallery">
     <div id="dpi"></div>
 {/if}
-{if $_modx->resource.id > 20 || $_modx->resource.id == 4}
+{if $_modx->resource.id > 20 || $_modx->resource.id == 4 || $_modx->resource.id == 5}
     <body id="static">
 {/if}
 {if (($_modx->resource.id != 4) || ($_modx->resource.id != 3 && $_modx->resource.id < 20) || ($_modx->resource.id != 2 && $_modx->resource.id < 20) || ($_modx->resource.id != 1 && $_modx->resource.id < 20)) }

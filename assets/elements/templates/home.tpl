@@ -85,7 +85,7 @@
 		<div><h2>Контакты</h2></div>
 		<div>Телефон: <a href="tel:+74959606074">{$_modx->config['header_phone']}</a></div>
 		<div>E-mail: <a href="mailto:{$_modx->config['header_email']}">{$_modx->config['header_email']}</a></div>
-		<div>Адрес: Московская обл., Солнечногорский район, пгт. Поварово, ул. Почтовая, д.29</div>
+		<div>Адрес: {$_modx->config['header_address']}</div>
 	</div>
 	<div id="maps">
 		<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=H6djMs3um9F-ldMhf3W6DeE6s4EJIntj&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;sourceType=constructor&amp;scroll=true"></script>
