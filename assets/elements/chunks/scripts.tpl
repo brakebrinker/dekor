@@ -8,6 +8,7 @@
         //     $('#product section').find('img').addClass('showbox');
 </script>
 <script src="{$_modx->config['assets_url']}js/script.js" rel="script"></script>
+<script src="{$_modx->config['assets_url']}js/catalog.js" rel="script"></script>
 <script src="{$_modx->config['assets_url']}js/jquery.maskedinput.js"></script>
 <script src="{$_modx->config['assets_url']}js/slick.min.js"></script>
 <script src="{$_modx->config['assets_url']}js/jquery.magnific-popup.min.js"></script>
