@@ -11,18 +11,18 @@
 			{$_modx->resource.content}
 				<div class="main-catalog__items">
 					<div id="pdopage">
-					    <div class="rows">
-							[[!pdoPage?
-							           &parents=`$_modx->resource.id`
-							           &element=`msProducts`
-							           &ajaxMode=`default`
-							           &limit=`2`
-							           &parents=`$_modx->resource.id`
-							           &tpl=`@FILE chunks/productsMainRow.tpl`
-							       ]]
-				       </div>
+						<div class="rows">
+							{$_modx->runSnippet('!pdoPage', [
+								'parents' => $_modx->resource.id,
+								'element' => 'msProducts',
+								'limit' => '2',
+								'optionFilters' => $_modx->runSnippet('!outFilter'),
+								'tpl' => '@FILE chunks/productsMainRow.tpl',
+							])}
+						</div>
 						[[!+page.nav]]
 					</div>
+					<div class="out-filter"></div>
 				</div>
 			</div>
 		</div>

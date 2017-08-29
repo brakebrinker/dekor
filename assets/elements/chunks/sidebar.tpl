@@ -19,5 +19,6 @@
 				[[!getOption? &name=`color` &tpl=`myGetOptionTpl`]]
 	        </div>
         </div><!-- /.select-wrapper -->
+        <input type="submit" value="Отправить">
 	</form>
 </aside>
