@@ -746,6 +746,9 @@ section.catalog .ms2_product_main {
 	box-sizing: border-box;
 	margin: 16px 8px;
 }
+.catalog-wrapper .ms2_product_main {
+	width: 30%;
+}
 
 .product_img {
 	overflow: hidden;
@@ -2347,6 +2350,9 @@ header .price-request-button {
 	.main-gallery .waterwheel-carousel {
 	    height: 625px;
 	}
+	.catalog-wrapper .ms2_product_main {
+		width: 40%;
+	}
 }
 
 @media (max-width: 800px) {
@@ -2366,6 +2372,9 @@ header .price-request-button {
 	}
 	.main-gallery .waterwheel-carousel {
 	    height: 500px;
+	}
+	.catalog-wrapper .ms2_product_main {
+		width: 45%;
 	}
 
 }
@@ -2669,6 +2678,9 @@ header .price-request-button {
 	}
 	.gallery-container .waterwheel-carousel {
 	    height: 305px;
+	}
+	.catalog-wrapper .ms2_product_main {
+		width: 300px;
 	}
 }
 @media (max-width: 510px) {
