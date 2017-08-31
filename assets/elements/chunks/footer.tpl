@@ -45,6 +45,6 @@
 		</div>
 	</div>
 	<div class="foot-copyright">
-		2017 © Deco-r.su, все права защищены
+		2017 © Decomur.ru, все права защищены
 	</div>
 </footer>

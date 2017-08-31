@@ -12,13 +12,14 @@
 	
 	<form action="" method="get">
 		<div class="select-wrapper">
+			<h3>Размеры</h3>
             <div id="select-size" name="select-size" class="form-control">
             	[[!getOption? &name=`size` &tpl=`myGetOptionTpl`]]
 	        </div>
+	        <h3>Цвета</h3>
 	        <div id="select-color" name="select-color" class="form-control">
 				[[!getOption? &name=`color` &tpl=`myGetOptionTpl`]]
 	        </div>
         </div><!-- /.select-wrapper -->
-        <input type="submit" value="Отправить">
 	</form>
 </aside>

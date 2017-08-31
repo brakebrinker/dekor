@@ -15,7 +15,7 @@
 		  <img src="[[pthumb? &input=`{$_modx->config['assets_url']}images/produce/{$row.image}` &options=`&w=265&h=265&zc=0&aoe=0&far=0`]]" alt="{$_modx->resource.pagetitle}" alt="">
 		</a>
 		{/foreach}
-		</div
+		</div>
 	</div>
 </section>
 {/block}

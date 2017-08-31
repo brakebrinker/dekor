@@ -15,14 +15,15 @@
 							{$_modx->runSnippet('!pdoPage', [
 								'parents' => $_modx->resource.id,
 								'element' => 'msProducts',
-								'limit' => '2',
+								'ajaxMode' => 'default',
+								'ajax' => '1',
+								'ajaxHistory' => '1',
+								'limit' => '0',
 								'optionFilters' => $_modx->runSnippet('!outFilter'),
 								'tpl' => '@FILE chunks/productsMainRow.tpl',
 							])}
 						</div>
-						[[!+page.nav]]
 					</div>
-					<div class="out-filter"></div>
 				</div>
 			</div>
 		</div>

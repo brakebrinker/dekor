@@ -52,15 +52,18 @@
 	<div class="main-gallery-container">
 		<div class="main-gallery__items waterwheel-carousel">
 			<h2>Галерея</h2>
-			<div class="object">
-			    {set $rows = json_decode($_modx->resource.mainalbum, true)}
-			    </div>
-			    <!-- <div class="object-more"><a href="#">Подробнее</a></div> -->
-			    <div class="waterwheel-carousel-main">
-			    {foreach $rows as $row}
-			      <img src="[[pthumb? &input=`{$_modx->config['assets_url']}images/main/{$row.image}` &options=`&w=640&h=480&zc=0&aoe=0&far=0`]]" alt="">
-			    {/foreach}
-			    </div>
+				<div class="object">
+				    {set $rows = json_decode($_modx->resource.mainalbum, true)}
+				    <!-- <div class="object-more"><a href="#">Подробнее</a></div> -->
+				    <div class="waterweel-nav">
+				    	<span class="prev"></span>
+				    	<span class="next"></span>
+				    </div> 
+				    <div class="waterwheel-carousel-main">
+				    {foreach $rows as $row}
+				      <img src="[[pthumb? &input=`{$_modx->config['assets_url']}images/main/{$row.image}` &options=`&w=640&h=480&zc=0&aoe=0&far=0`]]" alt="">
+				    {/foreach}
+				    </div>
 			</div>
 		</div>
 	</div>

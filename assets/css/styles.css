@@ -21,6 +21,27 @@
 	overflow: hidden;
 	margin: 0 auto;
 }
+.object {
+	position: relative;
+}
+.waterweel-nav {
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.waterweel-nav .prev,
+.waterweel-nav .next {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    margin: 0 10px;
+}
+.waterweel-nav .prev {
+	background: url(../images/prev-car.png) no-repeat 0 0;
+}
+.waterweel-nav .next {
+	background: url(../images/next-car.png) no-repeat 0 0;
+}
 #waterwheel-carousel img {
   visibility:hidden; /* hide images until carousel positions them */
   cursor:pointer;
@@ -705,6 +726,11 @@ section.catalog .ms2_product_main {
 	flex-direction: column;
 	position: relative;
 }
+.main-catalog__items {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
 /*.main-catalog__items {
 	display: flex;
 	flex-wrap: wrap;
@@ -876,6 +902,12 @@ section.home-contenttext,
 section.main-gallery {
 	background: transparent;
 	padding: 0;
+}
+.gallery-popup {
+    margin-bottom: 30px;
+}
+.gallery-popup a {
+    margin: 5px;
 }
 .home-introtext__container,
 .static-wrapper,
@@ -1146,6 +1178,7 @@ section.cart .cart-container h3 {
 .gallery .object-descr {
 	font-size: 22px;
 	font-weight: 300;
+	margin-bottom: 25px;
 }
 
 .static-content {
@@ -1382,6 +1415,78 @@ span.error_iagry.error {
     text-decoration: none;
 }
 
+/* Base for label styling */
+aside [type="checkbox"]:not(:checked),
+aside [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+aside [type="checkbox"]:not(:checked) + label,
+aside [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+  line-height: 30px;
+  font-size: 20px;
+  padding-top: 6px;
+}
+
+/* checkbox aspect */
+aside [type="checkbox"]:not(:checked) + label:before,
+aside [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+aside [type="checkbox"]:not(:checked) + label:after,
+aside [type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: .2em; left: .3em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #8bc34a;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+aside [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+aside [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+aside [type="checkbox"]:disabled:not(:checked) + label:before,
+aside [type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+aside [type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+aside [type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+aside [type="checkbox"]:checked:focus + label:before,
+aside [type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9!important;
+}
+
 
 img.logo {
 
@@ -1412,6 +1517,12 @@ aside.catalog-category {
     flex: 3;
     padding: 0 20px;
     box-sizing: border-box;
+}
+aside.catalog-category .select-wrapper h3 {
+    margin-top: 30px;
+}
+aside .select-wrapper .form-control div {
+    text-align: left;
 }
 .center {
     flex: 12;

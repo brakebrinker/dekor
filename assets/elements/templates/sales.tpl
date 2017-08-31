@@ -6,7 +6,7 @@
 	<div class="catalog-wrapper">
 	    <h1>{$_modx->resource.longtitle}</h1>
 	    <div class="content-all-container">
-	    	{insert 'file:chunks/sidebar.tpl'}
+	    	{insert 'file:chunks/sidebar-sale.tpl'}
 	    	<div class="center">
 		    {$_modx->resource.content}
 			    <div class="main-catalog__items">
